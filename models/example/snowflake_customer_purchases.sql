@@ -1,3 +1,7 @@
+select *
+from {{ ref('my_first_dbt_model') }}
+
+/*
 
 SELECT
     c.c_custkey,
@@ -12,3 +16,4 @@ group_by
     c.c_custkey,
     c.c_name,
     c.c_nationkey
+*/
