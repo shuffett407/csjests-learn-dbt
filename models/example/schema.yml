@@ -79,3 +79,14 @@ models:
           - name: order_date
             tests:
                 - not_null
+sources:
+  - name: sample2
+    schema: dbt
+    tables:
+      - name: snowflake_customer_purchases
+  - name: sample3
+    database: dbt-tutorial
+    schema: jaffle_shop
+    tables:
+      - name: customers
+      - name: orders
