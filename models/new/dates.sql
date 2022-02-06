@@ -1,3 +1,2 @@
-select *
-from  `dbt-tutorial.jaffle_shop.customers`
-
+-- removed
+select false as no_name

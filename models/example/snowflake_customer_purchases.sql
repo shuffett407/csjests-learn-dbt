@@ -1,5 +1,13 @@
-select *
-from {{ ref('my_first_dbt_model') }}
+select  
+      c_custkey,
+      c_name,
+      c_nationkey as nation
+  from (select  1 as c_custkey,                
+                2 as c_name,
+                3 as c_nationkey
+        )
+        
+{{group_by(3)}}
 
 /*
 
