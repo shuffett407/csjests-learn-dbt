@@ -24,12 +24,12 @@ models:
     - name: playing_with_tests
       description: "A customer dataset"
       columns:
-          - name: id
+          - name: c_custkey
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
-          - name: last_name
+          - name: name
             description: "First initial"
             tests:
               - accepted_values:
@@ -57,28 +57,6 @@ models:
                     - 'W.'
 
     - name: cumulative_orders_by_date
-      description: "Running cumulative payments by order date"
-      columns:
-          - name: orderid
-            description: "Order id"
-          - name: order_date
-            description: "Order date"
-          - name: paymentid
-            description: "Payment id"
-          - name: amountpd
-            description: "Payment amount"
-          - name: runningtotal
-            description: "Cumulative payments made for orders placed on or before the order date"
-          - name: paymentid
-            tests:
-                - unique
-                - not_null
-          - name: amountpd
-            tests:
-                - not_null
-          - name: order_date
-            tests:
-                - not_null
 sources:
   - name: sample2
     schema: dbt
