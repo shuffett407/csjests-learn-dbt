@@ -30,7 +30,7 @@ models:
                 - unique
                 - not_null
           - name: name
-            description: "First initial"
+            description: "First initial of last name"
             tests:
               - accepted_values:
                   values:
