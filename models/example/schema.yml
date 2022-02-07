@@ -30,7 +30,7 @@ models:
                 - unique
                 - not_null
           - name: name
-            description: "First initial of last name"
+            description: "The first initial of the customer last name"
             tests:
               - accepted_values:
                   values:
@@ -56,6 +56,10 @@ models:
                     - 'T.'
                     - 'W.'
 
+    - name: cumulative_orders_by_date
+      description: "Running cumulative payments by order date"
+                
+sources:
   - name: sample2
     schema: dbt
     tables:
