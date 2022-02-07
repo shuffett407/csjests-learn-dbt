@@ -56,6 +56,10 @@ models:
                     - 'T.'
                     - 'W.'
 
+    - name: cumulative_orders_by_date
+      description: "Running cumulative payments by order date"
+                
+sources:
   - name: sample2
     schema: dbt
     tables:
